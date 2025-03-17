@@ -26,6 +26,7 @@
         .sidebar h2 {
             color: #ffcc00;
             text-align: center;
+            font-size: 24px;
         }
         .sidebar a {
             display: block;
@@ -35,6 +36,7 @@
             margin: 5px 0;
             background: #2E2E2E;
             border-radius: 5px;
+            font-size: 18px;
         }
         .sidebar a:hover {
             background: #ffcc00;
@@ -51,31 +53,26 @@
         .active {
             display: block;
         }
+        h2 {
+            font-size: 32px;
+            color: #ffcc00;
+        }
     </style>
 </head>
 <body>
     <div class="sidebar">
         <h2>📜 Règlement LunarRP</h2>
-        <a href="#" onclick="showSection('general')">Règlement Général</a>
         <a href="#" onclick="showSection('discord')">Règlement Discord</a>
-        <a href="#" onclick="showSection('streaming')">Règlement Streaming</a>
+        <a href="#" onclick="showSection('general')">Règlement Général</a>
+        <a href="#" onclick="showSection('sanctions')">Sanctions</a>
         <a href="#" onclick="showSection('illegal')">Règlement Illégal</a>
         <a href="#" onclick="showSection('legal')">Règlement Légal</a>
-        <a href="#" onclick="showSection('sanctions')">Sanctions</a>
+        <a href="#" onclick="showSection('streaming')">Règlement Streaming</a>
         <a href="#" onclick="showSection('lexique')">Lexique</a>
     </div>
 
     <div class="content">
-        <div id="general" class="section active">
-            <h2>📜 Règlement Général</h2>
-            <p>2.01 - Il est interdit de vendre vos possessions en jeu en utilisant de la vraie argent.</p>
-            <p>2.02 - Le RP sexe est totalement interdit.</p>
-            <p>2.03 - L'utilisation d'un sac est obligatoire pour tout objet de grande dimension.</p>
-            <p>2.04 - Les cheats/mod-menus sont interdits sous peine de bannissement.</p>
-            <p>2.05 - Une scène RP doit être jouée jusqu'au bout avant de faire une réclamation.</p>
-        </div>
-
-        <div id="discord" class="section">
+        <div id="discord" class="section active">
             <h2>💬 Règlement Discord</h2>
             <p>1.01 - Aucun comportement discriminatoire ou harcelant ne sera toléré.</p>
             <p>1.02 - Il est interdit de partager des contenus illégaux ou inappropriés.</p>
@@ -83,27 +80,12 @@
             <p>1.04 - Le non-respect de ces règles peut entraîner des sanctions.</p>
         </div>
 
-        <div id="streaming" class="section">
-            <h2>🎥 Règlement Streaming</h2>
-            <p>6.01 - Le streamhack est interdit.</p>
-            <p>6.02 - La modération peut utiliser les streams comme preuve.</p>
-            <p>6.03 - Un salon "stream" est disponible sur Discord pour les streamers.</p>
-            <p>6.04 - Il est interdit de diffuser les points chauds (drogues, blanchiment).</p>
-            <p>6.05 - Les clips peuvent être utilisés pour des compilations YouTube/TikTok non-monétisées.</p>
-        </div>
-
-        <div id="illegal" class="section">
-            <h2>🔫 Règlement Illégal</h2>
-            <p>4.01 - Les otages ne doivent pas être des joueurs consentants ou des faux otages.</p>
-            <p>4.02 - Les descentes et guerres doivent être validées via un GDOC.</p>
-            <p>4.03 - Un gang doit respecter la cohérence RP et avoir peur des organisations plus puissantes.</p>
-        </div>
-
-        <div id="legal" class="section">
-            <h2>⚖️ Règlement Légal</h2>
-            <p>5.01 - Les forces de l'ordre doivent respecter leurs protocoles.</p>
-            <p>5.02 - Il est interdit de se faire passer pour un agent si vous ne l'êtes pas.</p>
-            <p>5.03 - Un patron d’entreprise doit payer ses employés chaque semaine.</p>
+        <div id="general" class="section">
+            <h2>📜 Règlement Général</h2>
+            <p>2.01 - Il est interdit de vendre vos possessions en jeu en utilisant de la vraie argent.</p>
+            <p>2.02 - Le RP sexe est totalement interdit.</p>
+            <p>2.03 - L'utilisation d'un sac est obligatoire pour tout objet de grande dimension.</p>
+            <p>2.04 - Les cheats/mod-menus sont interdits sous peine de bannissement.</p>
         </div>
 
         <div id="sanctions" class="section">
@@ -113,13 +95,30 @@
             <p>3.03 - Un ban permanent peut être discuté avec l'administration.</p>
         </div>
 
+        <div id="illegal" class="section">
+            <h2>🔫 Règlement Illégal</h2>
+            <p>4.01 - Les otages ne doivent pas être des joueurs consentants ou des faux otages.</p>
+            <p>4.02 - Les descentes et guerres doivent être validées via un GDOC.</p>
+        </div>
+
+        <div id="legal" class="section">
+            <h2>⚖️ Règlement Légal</h2>
+            <p>5.01 - Les forces de l'ordre doivent respecter leurs protocoles.</p>
+            <p>5.02 - Il est interdit de se faire passer pour un agent si vous ne l'êtes pas.</p>
+        </div>
+
+        <div id="streaming" class="section">
+            <h2>🎥 Règlement Streaming</h2>
+            <p>6.01 - Le streamhack est interdit.</p>
+            <p>6.02 - La modération peut utiliser les streams comme preuve.</p>
+            <p>6.03 - Un salon "stream" est disponible sur Discord pour les streamers.</p>
+        </div>
+
         <div id="lexique" class="section">
             <h2>📖 Lexique</h2>
             <p>Metagaming : Utilisation d'informations HRP en RP.</p>
             <p>Powergaming : Actions irréalistes en jeu.</p>
             <p>No Pain : Ne pas jouer la douleur ressentie.</p>
-            <p>WinRP : Ne pas prendre en compte l’environnement RP.</p>
-            <p>Usebug : Exploiter des bugs pour un avantage.</p>
         </div>
     </div>
 
