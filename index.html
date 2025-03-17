@@ -3,43 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Règlement - Ton Serveur</title>
+    <title>Règlement du Serveur</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
             background-color: #121212;
             color: white;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(255, 255, 255, 0.1);
+        .sidebar {
+            width: 250px;
+            background: #1E1E1E;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
         }
-        h1 {
+        .sidebar h2 {
             color: #ffcc00;
+            text-align: center;
         }
-        p {
-            text-align: justify;
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 5px 0;
+            background: #2E2E2E;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background: #ffcc00;
+            color: black;
+        }
+        .content {
+            margin-left: 270px;
+            padding: 20px;
+            width: 100%;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>📜 Règlement du Serveur</h1>
-        <p>Bienvenue sur le serveur ! Voici les règles à respecter :</p>
-        <ul>
-            <li>Respecter les autres joueurs et l'équipe du serveur.</li>
-            <li>Ne pas utiliser de cheat, glitch ou bug exploit.</li>
-            <li>Ne pas faire de publicité pour d'autres serveurs.</li>
-            <li>Utiliser un RP sérieux et éviter le troll.</li>
-        </ul>
-        <p>Tout non-respect des règles peut entraîner des sanctions.</p>
+    <div class="sidebar">
+        <h2>📜 Règlement</h2>
+        <a href="#" onclick="showSection('general')">Règlement Général</a>
+        <a href="#" onclick="showSection('police')">Forces de l'Ordre & EMS</a>
+        <a href="#" onclick="showSection('crime')">Règles des Criminels</a>
+        <a href="#" onclick="showSection('discord')">Règlement Discord</a>
+        <a href="#" onclick="showSection('stream')">Règlement Streaming</a>
     </div>
+
+    <div class="content">
+        <div id="general" class="section active">
+            <h2>📜 Règlement Général</h2>
+            <p>Respectez les autres joueurs et l'équipe du serveur.</p>
+            <p>Ne pas utiliser de cheat, glitch ou bug exploit.</p>
+            <p>Ne pas faire de publicité pour d'autres serveurs.</p>
+        </div>
+        <div id="police" class="section">
+            <h2>🚔 Forces de l'Ordre & EMS</h2>
+            <p>Les policiers et EMS doivent suivre les protocoles établis.</p>
+            <p>L'usage excessif de la force est interdit.</p>
+        </div>
+        <div id="crime" class="section">
+            <h2>💀 Règles des Criminels</h2>
+            <p>Les scènes RP illégales doivent être réalistes.</p>
+            <p>L'abus de powergaming est sanctionné.</p>
+        </div>
+        <div id="discord" class="section">
+            <h2>💬 Règlement Discord</h2>
+            <p>Pas de harcèlement ou d'insultes.</p>
+            <p>Le spam est interdit.</p>
+        </div>
+        <div id="stream" class="section">
+            <h2>🎥 Règlement Streaming</h2>
+            <p>Les streamers doivent respecter la vie privée des joueurs.</p>
+            <p>Évitez de montrer des discussions privées en live.</p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(id) {
+            var sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </body>
 </html>
